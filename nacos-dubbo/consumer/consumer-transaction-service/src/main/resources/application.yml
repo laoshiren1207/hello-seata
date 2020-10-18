@@ -1,0 +1,23 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: consumer-transaction
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.79.0.210:8848
+    alibaba:
+      seata:
+        tx-service-group: tx_group
+
+dubbo:
+  scan:
+    base-packages: com.laoshiren.hello.seata.consumer.transaction.api.impl
+  protocol:
+    name: dubbo
+    port: -1
+  provider:
+    loadbalance: roundrobin
+  registry:
+    address: nacos://120.79.0.210:8848

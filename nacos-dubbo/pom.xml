@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.laoshiren.hello.seata</groupId>
+        <artifactId>hello-seata</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>nacos-dubbo</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        注意！本项目是 nacos 和 seata 使用 dubbo 的 rpc 通信方式进行的事务管理
+        并非单独一个服务
+    </description>
+
+    <modules>
+        <module>provider</module>
+        <module>consumer</module>
+        <module>business</module>
+    </modules>
+</project>
